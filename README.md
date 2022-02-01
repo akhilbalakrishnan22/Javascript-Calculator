@@ -1,2 +1,2 @@
 # Javascript-Calculator
-Basic calculator using HTML, CSS and Javascript
+Basic calculator wit neumorphism design using HTML, CSS and Javascript
