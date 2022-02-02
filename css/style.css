@@ -92,6 +92,30 @@ label input[type="checkbox"]:checked~.fas {
     color: var(--color-light-blue);
 }
 
+.result {
+    height: 30%;
+    position: relative;
+    background: var(--bg);
+}
+
+.upper-value {
+    position: absolute;
+    text-align: right;
+    bottom: 30%;
+    right: 5%;
+    font-size: 32px;
+    color: var(--color-text);
+}
+
+.lower-value {
+    position: absolute;
+    text-align: right;
+    bottom: 2%;
+    right: 5%;
+    font-size: 32px;
+    color: var(--color-text);
+}
+
 #calculator {
     padding: 30px 20px;
 }
