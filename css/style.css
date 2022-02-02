@@ -13,7 +13,7 @@ html {
         inset 2px 2px 6px rgba(0, 0, 0, 0.1);
     --color-equal-shadow: -2px -2px 8px rgba(3, 169, 244, 0.01),
         2px 2px 6px rgb(0, 0, 0, 0.3);
-    --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0, 0.5),
+    --color-equal-inset-shadow: inset -2px -2px 6px rgba(0, 217, 255, 0.5),
         inset 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -27,7 +27,7 @@ html[data-theme="dark"] {
         inset 2px 2px 6px rgba(0, 0, 0, 0.8);
     --color-equal-shadow: -2px -2px 6px rgba(3, 169, 244, 0.01),
         2px 2px 6px rgba(0, 0, 0, 0.8);
-    --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0, 0.2),
+    --color-equal-inset-shadow: inset -2px -2px 6px rgba(0, 217, 255, 0.2),
         inset 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -90,4 +90,97 @@ label input[type="checkbox"] {
 
 label input[type="checkbox"]:checked~.fas {
     color: var(--color-light-blue);
+}
+
+#calculator {
+    padding: 30px 20px;
+}
+
+.group {
+    width: 185px;
+    float: left;
+}
+
+.top-section {
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 4px 6px;
+    border-radius: 30px;
+    margin-left: 10px;
+    background: var(--bg);
+    box-shadow: var(--color-shadow);
+}
+
+.top-section button {
+    margin-top: 2px;
+}
+
+.middle-section {
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 10.4px;
+    border-radius: 30px;
+}
+
+.middle-section button {
+    margin: 4px 5px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.side-section {
+    float: left;
+    height: 254px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px 4px;
+    border-radius: 30px;
+    margin-left: 10px;
+    background: var(--bg);
+    box-shadow: var(--color-shadow);
+}
+
+.operator, .number {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--bg);
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: var(--color-shadow);
+}
+
+.equal {
+    background-color: var(--color-light-blue);
+    color: #FFFF !important;
+    box-shadow: var(--color-equal-shadow);
+}
+
+.operator {
+    color: var(--color-light-blue);
+}
+
+.operator:active,
+.number:active {
+    box-shadow: var(--color-inset-shadow);
+}
+
+.number:hover {
+    color: var(--color-light-blue);
+}
+
+.equal:active {
+    background: var(--color-light-blue);
+    box-shadow: var(--color-equal-inset-shadow);
 }
