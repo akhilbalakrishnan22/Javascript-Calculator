@@ -16,7 +16,9 @@
 </head>
 
 <body>
+    <!-- ============================= Wrapper ============================= -->
     <div class="wrapper">
+        <!-- ============== Header ============== -->
         <div class="header">
             <a href="https://github.com/akhilbalakrishnan22/Javascript-Calculator" target="_blank">
                 <span><i class="fab fa-github"></i> Source </span>
@@ -28,19 +30,22 @@
                 </label>
             </span>
         </div>
+        <!-- ============== Header End ============== -->
 
+        <!-- ============== Display Area ============== -->
         <div class="result">
             <div class="history">
                 <p class="upper-value" id="upper_value"></p>
             </div>
-            <div class="output">
-                <p class="lower-value" id="lower_value"></p>
-            </div>
+            <input type="text" class="lower-value" id="lower_value">
         </div>
+        <!-- ============== Display Area End ============== -->
 
-        <!-- ====================================rename the id====================================== -->
-        <div id="calculator">
+        <!-- ============== Keyboard Section ============== -->
+        <div id="keys">
+            <!--group of top section keys & number keys-->
             <div class="group">
+                <!--clear delete percentage keys-->
                 <div class="top-section">
                     <button onclick="clearAll()" class="operator">C</button>
                     <button onclick="del()" class="operator">
@@ -48,6 +53,7 @@
                     </button>
                     <button onclick="display('%')" class="operator">%</button>
                 </div>
+                <!--number keys-->
                 <div class="middle-section">
                     <div>
                         <button onclick="display('7')" class="number">7</button>
@@ -71,6 +77,7 @@
                     </div>
                 </div>
             </div>
+            <!--vertical buttons operators keys -->
             <div class="side-section">
                 <button onclick="display('/')" class="operator">/</button>
                 <button onclick="display('*')" class="operator">*</button>
@@ -79,7 +86,9 @@
                 <button onclick="calc()" class="operator equal">=</button>
             </div>
         </div>
+        <!-- ============== Keyboard Section End ============== -->
     </div>
+    <!-- ============================= Wrapper End ============================= -->
 
     <!-- Javacript -->
     <script src="js/script.js"></script>
