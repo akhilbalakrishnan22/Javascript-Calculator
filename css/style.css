@@ -123,6 +123,11 @@ label input[type="checkbox"]:checked~.fas {
     background: var(--bg);
     border: none;
     width: 280px;
+    cursor: default;
+
+}
+input:focus {
+    outline: none;
 }
 
 /* ===================== Keyboard Section ===================== */

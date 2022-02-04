@@ -21,13 +21,11 @@ checkbox.addEventListener('change', function () {
 
 
 /**
- * currently here the "upperDat, lowerData" are not using. It uses when the expression nee to be
- * moved to the upper value.And the result will be displayed in the lower value.But now both the
- * expression and result are showing in the lower value.
+ * upperData contains the element <p> element with id="upper_value" & data contains the <input> element 
+ * with id="lower_value".
  */
 
-// let upperData = document.getElementById("upper_value");
-// let lowerData = "";
+let upperData = document.getElementById("upper_value");
 let data = document.getElementById("lower_value");
 
 
@@ -35,7 +33,7 @@ let data = document.getElementById("lower_value");
  * Function to clear both upper value and lower value 
  */
 function clearAll() {
-    // upperData.innerText = "";
+    upperData.innerHTML = "";
     data.value = "";
 }
 
@@ -57,12 +55,16 @@ function display(_val) {
  * Function to evaluate the expression that the user has been entered.The evaluation is carried out
  * inside the try block and if the expression is an invalid it alerts the user the entered expression
  * cannot be evaluated.
+ * This function also moving the data.value which is an expression (eg: 6+3) to the upperData.innerHTML.
+ * Also whenever an alert occurs with msg invalid after that it clears the display. 
  */
 function calc() {
     try {
+        upperData.innerHTML = data.value;
         data.value = eval(data.value);
     }
     catch (err) {
         alert("Invalid");
+        clearAll()
     }
 }
