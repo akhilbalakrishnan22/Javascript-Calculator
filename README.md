@@ -1,5 +1,5 @@
 # Javascript-Calculator
-Basic calculator with neumorphism design using HTML, CSS and Javascript
+Basic calculator with neumorphism design & dark mode using HTML, CSS and Javascript.
 
 ## What i learned?
 - How to use fontawesome icons in a website.
